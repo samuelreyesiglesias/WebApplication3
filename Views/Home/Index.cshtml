@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Dependency Injection</h1>
+
+    Controller Request:<br />
+    Transient:@ViewBag.Transient.OperationId<br />
+    Scoped:@ViewBag.Scoped.OperationId<br />
+    Singleton:@ViewBag.Singleton.OperationId<br /> 
+    Singleton Instance:@ViewBag.SingletonInstance.OperationId <br /><br />
+
+
+    Service Request:<br />
+    Transient:@ViewBag.Service.Transient.OperationId<br />
+    Scoped:@ViewBag.Service.Scoped.OperationId<br />
+    Singleton:@ViewBag.Service.Singleton.OperationId<br /> 
+    Singleton Instance:@ViewBag.Service.SingletonInstance.OperationId <br /><br />
+
+    
+
+
+    <p>
+    
+    Observe cuál de los valores de OperationId varía dentro de una solicitud y entre solicitudes.
+
+Los objetos transitorios son siempre diferentes; Se proporciona una nueva instancia a cada controlador y cada servicio.
+
+Los objetos con alcance son los mismos dentro de una solicitud, pero diferentes en diferentes solicitudes
+
+Los objetos Singleton son los mismos para cada objeto y cada solicitud (independientemente de si se proporciona una instancia en ConfigureServices)
+
+ 1008
+</p>
+</div>
